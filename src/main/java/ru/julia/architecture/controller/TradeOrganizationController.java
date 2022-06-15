@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/organization")
 public class TradeOrganizationController {
-    private final TradeOrganizationService tradeOrganizationService;
+    private final TradeOrganizationService tradeOrganizationServiceImpl;
 
     @PostMapping
     public void addOrganization(
@@ -22,12 +22,12 @@ public class TradeOrganizationController {
             @RequestParam String manager,
             @RequestParam String contract,
             @RequestParam Integer storage) {
-        tradeOrganizationService.addOrganization(id, name, contact, manager, contract, storage);
+        tradeOrganizationServiceImpl.addOrganization(id, name, contact, manager, contract, storage);
     }
 
     @DeleteMapping
     public void deleteOrganization(@RequestParam Integer id) {
-        tradeOrganizationService.deleteOrganization(id);
+        tradeOrganizationServiceImpl.deleteOrganization(id);
     }
 
     @PutMapping
@@ -37,32 +37,32 @@ public class TradeOrganizationController {
                                    @RequestParam(required = false) String manager,
                                    @RequestParam(required = false) String contract,
                                    @RequestParam(required = false) Integer storage) {
-        tradeOrganizationService.updateOrganisation(id, name, contact, manager, contract, storage);
+        tradeOrganizationServiceImpl.updateOrganisation(id, name, contact, manager, contract, storage);
     }
 
     @GetMapping("/byId")
     public TradeOrganization findOrganizationsById(@RequestParam Integer id) {
-        return tradeOrganizationService.findOrganizationsById(id);
+        return tradeOrganizationServiceImpl.findOrganizationsById(id);
     }
 
     @GetMapping("/byName")
     public List<TradeOrganization> findOrganizationsByName(@RequestParam String name) {
-        return tradeOrganizationService.findOrganizationsByName(name);
+        return tradeOrganizationServiceImpl.findOrganizationsByName(name);
     }
 
     @GetMapping("/byManager")
     public List<TradeOrganization> findOrganizationsByManager(@RequestParam String manager) {
-        return tradeOrganizationService.findOrganizationsByManager(manager);
+        return tradeOrganizationServiceImpl.findOrganizationsByManager(manager);
     }
 
     @GetMapping("/tasksByOrganization")
     public List<Task> findTasksByOrganization(@RequestParam Integer id) {
-        return tradeOrganizationService.findTasksByOrganization(id);
+        return tradeOrganizationServiceImpl.findTasksByOrganization(id);
     }
 
     @GetMapping("/all")
     public List<TradeOrganization> findAll() {
-        return tradeOrganizationService.findAll();
+        return tradeOrganizationServiceImpl.findAll();
     }
 
 }
