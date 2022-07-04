@@ -1,0 +1,9 @@
+{
+"task" : "do smth",
+"status" : "done"
+}
+
+{
+"task" : "do smth else",
+"status" : "start"
+}

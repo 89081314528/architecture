@@ -1,0 +1,7 @@
+<TradeOrganization name = "julia" contact = "132-23-23">
+    <manager>xxx</manager>
+    <tasks>
+        <Task name = "jnjjn jn" status = "done"/>
+        <Task name = "dxgfdcgfcg" status = "done"/>
+    </tasks>
+</TradeOrganization>
