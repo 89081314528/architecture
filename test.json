@@ -1,0 +1,14 @@
+{
+  "name": "julia",
+  "manager" : "xxx",
+  "tasks" : [{
+    "task" : "do smth",
+    "status" : "done"
+  },
+
+    {
+      "task" : "do smth else",
+      "status" : "start"
+    }]
+}
+
